@@ -398,7 +398,7 @@ case ${TOOL} in
             VendorExperiment="false"
         ;;
         esac
-
+	GOPATH=$GOPATH:$build/vendor
         unset GIT_DIR # unset git dir or it will mess with goinstall
         cd "${src}"
         if test "$VendorExperiment" = "true"
